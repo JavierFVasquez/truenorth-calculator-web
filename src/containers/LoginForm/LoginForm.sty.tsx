@@ -12,6 +12,10 @@ export const LoginFormContainer = styled.form`
   h3 {
     margin: 0 10px 30px 10px;
   }
+  @media (max-width: 768px) {
+    width: 90%;
+    margin: 40px 20px;
+  }
 `;
 
 export const LogoContainer = styled.div`
