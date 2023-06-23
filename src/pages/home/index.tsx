@@ -20,7 +20,7 @@ const Home = () => {
     <div>
       <Card sx={{ minWidth: 275 }}>
         <CustomAppBar
-          title={`Hi, ${user?.name}`}
+          title={`Hi, ${user?.name ?? "TrueNorth User"}`}
           centerComponent={<Balance />}
           logoutButton={
             <Button variant="contained" color="info" onClick={handleSignOut}>
