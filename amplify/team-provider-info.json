@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-truenorthcalculatorw-dev-125645-authRole",
+      "UnauthRoleArn": "arn:aws:iam::701945903784:role/amplify-truenorthcalculatorw-dev-125645-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::701945903784:role/amplify-truenorthcalculatorw-dev-125645-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-truenorthcalculatorw-dev-125645-deployment",
+      "UnauthRoleName": "amplify-truenorthcalculatorw-dev-125645-unauthRole",
+      "StackName": "amplify-truenorthcalculatorw-dev-125645",
+      "StackId": "arn:aws:cloudformation:us-east-1:701945903784:stack/amplify-truenorthcalculatorw-dev-125645/d37c4550-0f93-11ee-9dc9-122b931e14ef",
+      "AmplifyAppId": "d32ipuihxtcuam"
+    },
+    "categories": {
+      "auth": {
+        "truenorthcalculatorw7e178de9": {}
+      }
+    }
+  }
+}
