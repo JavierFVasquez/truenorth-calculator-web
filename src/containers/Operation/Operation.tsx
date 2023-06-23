@@ -42,6 +42,19 @@ const Operation = () => {
       })
     );
   };
+  const handleOperand1Change = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const inputValue = e.target.value;
+    if (/^[\d.]*$/.test(inputValue)) {
+      setOperand1(inputValue);
+    }
+  };
+
+  const handleOperand2Change = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const inputValue = e.target.value;
+    if (/^[\d.]*$/.test(inputValue)) {
+      setOperand2(inputValue);
+    }
+  };
 
   return (
     <OperationContainer>
@@ -50,13 +63,13 @@ const Operation = () => {
         <TextField
           label="Operand #1"
           value={operand1}
-          onChange={e => setOperand1(e.target.value)}
+          onChange={handleOperand1Change}
         />
         <Space size="L" direction="HORIZONTAL" />
         <TextField
           label="Operand #2"
           value={operand2}
-          onChange={e => setOperand2(e.target.value)}
+          onChange={handleOperand2Change}
         />
       </OperationButtonContainer>
       <Space size="XL" />
