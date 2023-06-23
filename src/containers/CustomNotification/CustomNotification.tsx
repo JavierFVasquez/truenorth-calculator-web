@@ -1,5 +1,3 @@
-import Stack from "@mui/material/Stack";
-import Button from "@mui/material/Button";
 import Snackbar from "@mui/material/Snackbar";
 import MuiAlert, { AlertProps } from "@mui/material/Alert";
 import { SyntheticEvent, forwardRef, useEffect, useState } from "react";
@@ -27,7 +25,7 @@ export default function CustomNotification() {
     }
   }, [error.error]);
 
-  const handleClose = (event?: SyntheticEvent | Event, reason?: string) => {
+  const handleClose = (_?: SyntheticEvent | Event, reason?: string) => {
     if (reason === "clickaway") {
       return;
     }
