@@ -5,10 +5,7 @@ import { BaseURL, Endpoints } from "../../../config/API";
 
 const axiosInstance = axios.create({
   // baseURL: api.baseUrl,
-  timeout: 40000,
-  headers: {
-    "Access-Control-Allow-Origin": "*"
-  }
+  timeout: 40000
 });
 
 const getURI = ({ url, params = {} }: GetURIProps) => {
