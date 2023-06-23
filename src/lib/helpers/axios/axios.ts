@@ -4,7 +4,6 @@ import { store } from "../../../data/redux/reducers";
 import { BaseURL, Endpoints } from "../../../config/API";
 
 const axiosInstance = axios.create({
-  // baseURL: api.baseUrl,
   timeout: 40000
 });
 
