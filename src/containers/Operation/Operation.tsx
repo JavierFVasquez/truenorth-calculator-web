@@ -62,12 +62,14 @@ const Operation = () => {
       <OperationButtonContainer>
         <TextField
           label="Operand #1"
+          data-testid="operand-1"
           value={operand1}
           onChange={handleOperand1Change}
         />
         <Space size="L" direction="HORIZONTAL" />
         <TextField
           label="Operand #2"
+          data-testid="operand-2"
           value={operand2}
           onChange={handleOperand2Change}
         />
@@ -76,8 +78,9 @@ const Operation = () => {
       <OperationButtonContainer>
         <CustomLoadingButton
           variant="contained"
-          loading={["ADDITION"].includes(operationSelector.operation ?? "")}
+          loading={["ADDITION"].includes(operationSelector?.operation ?? "")}
           loadingPosition="end"
+          data-testid="addition-button"
           endIcon={<AddIcon />}
           onClick={() => handleOperatorClick("ADDITION")}
         >
@@ -86,7 +89,9 @@ const Operation = () => {
 
         <CustomLoadingButton
           variant="contained"
-          loading={["SUBSTRACTION"].includes(operationSelector.operation ?? "")}
+          loading={["SUBSTRACTION"].includes(
+            operationSelector?.operation ?? ""
+          )}
           loadingPosition="end"
           endIcon={<HorizontalRuleIcon />}
           onClick={() => handleOperatorClick("SUBSTRACTION")}
@@ -97,7 +102,7 @@ const Operation = () => {
         <CustomLoadingButton
           variant="contained"
           loading={["MULTIPLICATION"].includes(
-            operationSelector.operation ?? ""
+            operationSelector?.operation ?? ""
           )}
           loadingPosition="end"
           endIcon={<ClearIcon />}
@@ -108,7 +113,7 @@ const Operation = () => {
 
         <CustomLoadingButton
           variant="contained"
-          loading={["DIVISION"].includes(operationSelector.operation ?? "")}
+          loading={["DIVISION"].includes(operationSelector?.operation ?? "")}
           loadingPosition="end"
           endIcon={<ShapeLineIcon />}
           onClick={() => handleOperatorClick("DIVISION")}
@@ -118,7 +123,7 @@ const Operation = () => {
 
         <CustomLoadingButton
           variant="contained"
-          loading={["SQUARE_ROOT"].includes(operationSelector.operation ?? "")}
+          loading={["SQUARE_ROOT"].includes(operationSelector?.operation ?? "")}
           loadingPosition="end"
           endIcon={<CropSquareIcon />}
           onClick={() => handleOperatorClick("SQUARE_ROOT")}
@@ -129,7 +134,7 @@ const Operation = () => {
         <CustomLoadingButton
           variant="contained"
           loading={["RANDOM_STRING"].includes(
-            operationSelector.operation ?? ""
+            operationSelector?.operation ?? ""
           )}
           loadingPosition="end"
           endIcon={<ShuffleIcon />}
@@ -139,8 +144,8 @@ const Operation = () => {
         </CustomLoadingButton>
       </OperationButtonContainer>
       <ResultLabel>
-        {operationSelector.result != ""
-          ? `Result: ${operationSelector.result}`
+        {operationSelector?.result != ""
+          ? `Result: ${operationSelector?.result}`
           : ""}
       </ResultLabel>
     </OperationContainer>

@@ -58,8 +58,12 @@ _Follow these steps to install and run the project:_
 _The project can be tested using the following command:_
 
 ```bash
-npm run test
+yarn test:ui:watch
 ```
+
+_Test are in `src/test/Operation.test.tsx`_
+
+_Due to time issues I was not able to do more integration and unit tests, however I leave this sample of what is possible to do with react testing library and jest_
 
 ## Deployment 🌐
 
